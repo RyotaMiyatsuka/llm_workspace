@@ -1,0 +1,24 @@
+[project]
+name = "presentation"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "RyotaMiyatsuka", email = "miya882308@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "infrastructure",
+    "use-case",
+]
+
+[project.scripts]
+presentation = "presentation:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+use-case = { workspace = true }
+infrastructure = { workspace = true }

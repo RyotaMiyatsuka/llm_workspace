@@ -4,4 +4,12 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "presentation",
+]
+
+[tool.uv.workspace]
+members = ["src/domain", "src/use_case", "src/infrastructure", "src/app", "src/app/domain", "src/app/use_case", "src/app/presentation", "src/app/infrastructure", "src/presentation"]
+
+[tool.uv.sources]
+presentation = { workspace = true }

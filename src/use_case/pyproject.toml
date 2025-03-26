@@ -1,0 +1,22 @@
+[project]
+name = "use-case"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "RyotaMiyatsuka", email = "miya882308@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "domain",
+]
+
+[project.scripts]
+use-case = "use_case:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+domain = { workspace = true }
