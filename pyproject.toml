@@ -9,7 +9,7 @@ dependencies = [
 ]
 
 [tool.uv.workspace]
-members = ["src/domain", "src/use_case", "src/infrastructure", "src/app", "src/app/domain", "src/app/use_case", "src/app/presentation", "src/app/infrastructure", "src/presentation"]
+members = ["src/domain", "src/use_case", "src/infrastructure", "src/app", "src/app/domain", "src/app/use_case", "src/app/presentation", "src/app/infrastructure", "src/presentation", "tests"]
 
 [tool.uv.sources]
 presentation = { workspace = true }

@@ -12,3 +12,5 @@ class Role(StrEnum):
 
 class LLMCheckType(Enum):
     """LLM入出力チェック種別."""
+
+    POLICY_CHECK = "policy_check"

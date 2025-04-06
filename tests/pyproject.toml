@@ -1,0 +1,17 @@
+[project]
+name = "tests"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "domain",
+    "infrastructure",
+    "pytest>=8.3.5",
+    "use-case",
+]
+
+[tool.uv.sources]
+domain = { workspace = true }
+infrastructure = { workspace = true }
+use-case = { workspace = true }

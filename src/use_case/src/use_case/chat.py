@@ -44,7 +44,7 @@ class ChatAppService:
         input_check_result = self.guard_rails.check_input(messages=current_messages)
         # TODO: チェックエラー時処理
         if input_check_result.success is False:
-            return None
+            return "インプットチェックエラー"
 
         # 回答生成処理の呼び出し
         answer = self.llm_caller.generate(messages=current_messages)
@@ -55,7 +55,7 @@ class ChatAppService:
         )
         # TODO: チェックエラー時処理
         if output_check_result.success is False:
-            return None
+            return "アウトプットチェックエラー"
 
         # 会話の更新
         new_messages = current_messages.add_prompt_element(
