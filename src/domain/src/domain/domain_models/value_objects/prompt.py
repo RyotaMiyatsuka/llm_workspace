@@ -17,7 +17,7 @@ class Messages(BaseModel, frozen=True):
 
     messages: list[PromptElement] = Field(min_length=1)
 
-    def add_prompt_element(self, role: Role, content: str) -> Self:
+    def add_prompt_element(self, element: PromptElement) -> Self:
         """プロンプトを追加して返す."""
-        new_messages = [*self.messages, PromptElement(role=role, content=content)]
+        new_messages = [*self.messages, element]
         return Messages(messages=new_messages)

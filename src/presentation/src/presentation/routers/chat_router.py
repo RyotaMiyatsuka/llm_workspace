@@ -1,6 +1,8 @@
 # presentation/api/routers/user_router.py
 from fastapi import APIRouter
 
+from use_case.chat import ChatAppService
+
 # ルーターの作成
 router = APIRouter(
     prefix="/chat",
@@ -27,3 +29,5 @@ def create_chat():
 @router.post("/{chat_id}/invoke")
 def invoke():
     """チャット回答生成."""
+    ChatAppService()
+    return {"invoke": "success"}

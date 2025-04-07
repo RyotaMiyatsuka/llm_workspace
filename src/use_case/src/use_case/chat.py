@@ -38,7 +38,7 @@ class ChatAppService:
             chat_history_obj = ChatHistory(**chat_history)
             past_messages = chat_history_obj.messages
             # メッセージを更新
-            current_messages = past_messages.add_prompt_element(elem=current_elem)
+            current_messages = past_messages.add_prompt_element(element=current_elem)
 
         # LLM入力チェック
         input_check_result = self.guard_rails.check_input(messages=current_messages)

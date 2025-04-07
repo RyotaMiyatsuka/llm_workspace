@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "domain",
+    "httpx>=0.28.1",
     "infrastructure",
     "pytest>=8.3.5",
     "use-case",
